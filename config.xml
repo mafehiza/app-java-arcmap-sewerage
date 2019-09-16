@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ESRI.Configuration
+  xmlns="http://schemas.esri.com/Desktop/AddIns"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <Name>Sewerage</Name>
+  <AddInID>default</AddInID>
+  <Description>Application for Sewerage Networks.</Description>
+  <Version>1.0</Version>
+  <Image></Image>
+  <Author>Maria F. Hidalgo Z.</Author>
+  <Company>GeoBin</Company>
+  <Date>Mon Sep 16 09:07:16 CEST 2019</Date>
+  <Targets>
+    <Target name="Desktop" version="10.0"/>
+    <Target name="Desktop" version="10.1"/>
+    <Target name="Desktop" version="10.2"/>
+    <Target name="Desktop" version="10.3"/>
+    <Target name="Desktop" version="10.5"/>
+  </Targets>
+  <AddIn language="JAVA" library="app-java-sewerage.jar">
+    <ArcMap>
+      <Commands>
+        <Button caption="Edit Manhole" category="Manholes" class="arcgis10_2.button.EditManholeButton" id="EditManholeButton" message="Select a manhole to edit data." tip="Edit Manhole"/>
+        <Button caption="Adjust Survey" category="Manholes" class="arcgis10_2.button.AdjustSurveyButton" id="AdjustSurveyButton" message="Select manholes to adjust survey." tip="Adjust Survey"/>
+        <Button caption="Turn Sinks" category="Manholes" class="arcgis10_2.button.TurnSinksButton" id="TurnSinksButton" message="Select a sink to turn." tip="Turn Sinks"/>
+      </Commands>
+      <Toolbars>
+        <Toolbar caption="Sewerage Toolbar" id="SewerageToolbar">
+          <Items>
+            <Button refID="EditManholeButton"/>
+            <Button refID="AdjustSurveyButton"/>
+            <Button refID="TurnSinksButton"/>
+          </Items>
+        </Toolbar>
+      </Toolbars>
+    </ArcMap>
+  </AddIn>
+
+</ESRI.Configuration>
